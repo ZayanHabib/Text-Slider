@@ -1,0 +1,59 @@
+/* Text Slider | Text Carousel */
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .Slider {
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .Slider:before,
+  .Slider:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  .Slider:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+  }
+/* 
+  Zayan Habib
+   */
+  .Slider:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff);
+  }
+  
+  .Slider-slide {
+    display: flex;
+    gap: 20px;
+    animation: 35s slide infinite linear;
+  }
+  
+  .Slider-slide p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  /* Text Slider | Text Carousel */
